@@ -16,8 +16,8 @@ KEYWORDS=""
 IUSE="mysql postgres"
 
 RDEPEND="
-    virtual/jdk
-    dev-java/gradle-bin
+    dev-java/oracle-jre-bin
+    dev-java/oracle-jdk-bin
     mysql? ( dev-java/jdbc-mysql )
     postgres? ( dev-java/jdbc-postgresql )
 "
