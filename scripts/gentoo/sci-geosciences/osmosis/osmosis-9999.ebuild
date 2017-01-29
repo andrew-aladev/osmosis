@@ -31,5 +31,9 @@ pkg_setup() {
 }
 
 src_compile() {
-    ulimit -c unlimited && ./gradlew clean && ./gradlew assemble || die "gradle build failed"
+    ./gradlew clean && ./gradlew assemble || die "gradle build failed"
+}
+
+src_install() {
+    ./gradlew install
 }
