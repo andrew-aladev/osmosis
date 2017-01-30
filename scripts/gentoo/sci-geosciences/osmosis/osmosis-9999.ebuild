@@ -33,5 +33,8 @@ src_compile() {
 }
 
 src_install() {
-    ./gradlew install || die "gradle install failed"
+    mkdir "/opt/osmosis" \
+      && tar zxvf package/build/distribution/osmosis*.tgz -C "/opt/osmosis"
+    dodir "/opt/osmosis"
+    dosym "/opt/osmosis/bin/osmosis" "/usr/bin/osmosis"
 }
