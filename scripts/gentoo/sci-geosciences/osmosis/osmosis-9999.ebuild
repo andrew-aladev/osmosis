@@ -16,6 +16,8 @@ KEYWORDS=""
 IUSE="mysql postgres"
 
 RDEPEND="
+    app-arch/tar
+    app-arch/gzip
     mysql? ( dev-java/jdbc-mysql )
     postgres? ( dev-java/jdbc-postgresql )
 "
@@ -34,7 +36,8 @@ src_compile() {
 
 src_install() {
     mkdir "/opt/osmosis" \
-      && tar zxvf package/build/distribution/osmosis*.tgz -C "/opt/osmosis"
-    dodir "/opt/osmosis"
-    dosym "/opt/osmosis/bin/osmosis" "/usr/bin/osmosis"
+      && tar zxvf package/build/distribution/osmosis*.tgz -C "/opt/osmosis" \
+      || die "archive unpack failed"
+    dodir "/opt/osmosis" || die "installation to /opt failed"
+    dosym "/opt/osmosis/bin/osmosis" "/usr/bin/osmosis" || die "symlink to /usr/bin failed"
 }
