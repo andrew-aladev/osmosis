@@ -33,5 +33,5 @@ src_compile() {
 }
 
 src_install() {
-    ./gradlew install
+    ./gradlew install || die "gradle install failed"
 }
