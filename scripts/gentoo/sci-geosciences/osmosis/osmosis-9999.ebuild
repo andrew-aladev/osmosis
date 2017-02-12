@@ -39,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-    mkdir "${D}/opt/osmosis" \
+    mkdir -p "${D}/opt/osmosis" \
       && tar zxvf package/build/distribution/osmosis*.tgz -C "${D}/opt/osmosis" \
       || die "archive unpack to ${D}/opt/osmosis failed"
     dodir "${D}/opt/osmosis" || die "installation to ${D}/opt failed"
