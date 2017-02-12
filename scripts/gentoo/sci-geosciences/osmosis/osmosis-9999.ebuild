@@ -23,6 +23,10 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
+src_unpack() {
+    git-2_src_unpack
+}
+
 pkg_setup() {
     if ! use mysql && ! use postgres; then
         ewarn "If you use neither the mysql nor the postgres USE-flags"
