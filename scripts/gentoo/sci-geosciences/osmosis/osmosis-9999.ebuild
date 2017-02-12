@@ -39,9 +39,9 @@ src_compile() {
 }
 
 src_install() {
-    mkdir "/opt/osmosis" \
-      && tar zxvf package/build/distribution/osmosis*.tgz -C "/opt/osmosis" \
-      || die "archive unpack failed"
-    dodir "/opt/osmosis" || die "installation to /opt failed"
-    dosym "/opt/osmosis/bin/osmosis" "/usr/bin/osmosis" || die "symlink to /usr/bin failed"
+    mkdir "${D}/opt/osmosis" \
+      && tar zxvf package/build/distribution/osmosis*.tgz -C "${D}/opt/osmosis" \
+      || die "archive unpack to ${D}/opt/osmosis failed"
+    dodir "${D}/opt/osmosis" || die "installation to ${D}/opt failed"
+    dosym "${D}/opt/osmosis/bin/osmosis" "${D}/usr/bin/osmosis" || die "symlink to ${D}/usr/bin failed"
 }
