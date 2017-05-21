@@ -6,10 +6,10 @@ EAPI="5"
 inherit java-pkg-2 git-2
 
 DESCRIPTION="Osmosis is a command line java app for processing OSM data."
-HOMEPAGE="https://github.com/andrew-aladev/osmosis"
-EGIT_REPO_URI="https://github.com/andrew-aladev/osmosis.git"
+HOMEPAGE="https://github.com/openstreetmap/osmosis"
+EGIT_REPO_URI="https://github.com/openstreetmap/osmosis.git"
 
-LICENSE="Unknown Apache-2.0"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
 

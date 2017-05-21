@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>andrew.aladev@hiqo-solutions.com</email>
+    <name>Andrew Aladev</name>
+  </maintainer>
+  <longdescription>
+    Osmosis is a command line java app for processing OSM data.
+  </longdescription>
+  <use>
+    <flag name="mysql">MySQL bindings.</flag>
+    <flag name="postgres">PostgreSQL bindings.</flag>
+  </use>
+</pkgmetadata>
